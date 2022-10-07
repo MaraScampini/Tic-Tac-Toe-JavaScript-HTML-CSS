@@ -1,6 +1,13 @@
 :root {
     --white: #f9f9f9;
     --black: #222;
+    --blue: #00ecff;
+    --pink: #ff00ec;
+    --blue-transparent: #00ecff80;
+    --pink-transparent: #ff00ec80;
+    --dark-blue: #5d00ff;
+    --yellow: #f9cf00;
+    --yellow-transparent: #ffff0088;
     --transition: all 0.3s linear;
     font-size: 1em;
 }
@@ -55,7 +62,7 @@ body {
 
 .gradient-button:hover {
     transition: var(--transition);
-    box-shadow: 0px 0px 19px 0px rgba(255, 0, 236, 0.5), 0px 0px 23px 5px rgba(0, 236, 255, 0.5);
+    box-shadow: 0px 0px 19px 0px var(--pink-transparent), 0px 0px 23px 5px var(--blue-transparent);
     border: 0.1em solid #f9f9f9;
 }
 
@@ -77,8 +84,9 @@ body {
     flex-direction: column;
     align-items: center;
 }
-@media (min-width: 572px){
-    .main-playerselect{
+
+@media (min-width: 572px) {
+    .main-playerselect {
         justify-content: center;
     }
 }
@@ -104,7 +112,7 @@ body {
     width: 1.5rem;
     height: 1.5rem;
     border: 1px #f9f9f9 solid;
-    box-shadow: 0px 0px 5px 0px rgba(255, 0, 236, 0.3), 0px 0px 10px 2px rgba(0, 236, 255, 0.3);
+    box-shadow: 0px 0px 5px 0px var(--pink-transparent), 0px 0px 10px 2px var(--blue-transparent);
     transition: var(--transition);
 }
 
@@ -116,9 +124,9 @@ body {
     border: none;
 }
 
-.text-input-border-blue:focus{
+.text-input-border-blue:focus {
     border: 1px var(--white) solid;
-    box-shadow: 0px 0px 5px 0px rgba(255, 0, 236, 0.3), 0px 0px 10px 2px rgba(0, 236, 255, 0.3);
+    box-shadow: 0px 0px 5px 0px var(--pink-transparent), 0px 0px 10px 2px var(--blue-transparent);
 }
 
 .card-border-gradient-pink {
@@ -142,12 +150,14 @@ body {
     width: 1.5rem;
     height: 1.5rem;
     border: 1px #f9f9f9 solid;
-    box-shadow: 0px 0px 5px 2px rgba(255, 0, 236, 0.3), 0px 0px 10px 3px rgba(255, 255, 0, 0.535);
+    box-shadow: 0px 0px 5px 2px var(--pink-transparent), 0px 0px 10px 3px var(--yellow-transparent);
     transition: var(--transition);
 }
 
 @media(max-width: 572px) {
-    .form-blue, .form-pink {
+
+    .form-blue,
+    .form-pink {
         width: 1rem;
         height: 1rem;
     }
@@ -163,7 +173,7 @@ body {
 
 .text-input-border-pink:focus {
     border: 1px var(--white) solid;
-    box-shadow: 0px 0px 5px 2px rgba(255, 0, 236, 0.3), 0px 0px 10px 3px rgba(255, 255, 0, 0.535);
+    box-shadow: 0px 0px 5px 2px var(--pink-transparent), 0px 0px 10px 3px var(--yellow-transparent);
 }
 
 .gradient-button-play {
@@ -173,4 +183,97 @@ body {
     border-color: var(--white);
     border-image: linear-gradient(165deg, rgba(0, 236, 255, 1) 0%, rgba(255, 0, 236, 1) 100%) 1;
     width: 100%;
+}
+
+/* GAME */
+
+.positioning {
+    /* width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+/* BOARD */
+
+.board-container {
+    width: 32vw;
+    height: 32vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0;
+}
+
+@media (max-width: 1024px) {
+    .board-container {
+        height: 40vw;
+        width: 40vw;
+    }
+}
+
+@media (max-width: 572px) {
+    .board-container {
+        width: 70vw;
+        height: 70vw;
+    }
+}
+
+
+.cell {
+    text-align: center;
+    font-size: 7vw;
+    padding: 0;
+    cursor: pointer;
+}
+
+@media (max-width: 572px) {
+    .cell {
+        font-size: 15vw;
+    }
+}
+
+.border-rb-blue {
+    border-bottom: 0.03em solid #00ecff80;
+    border-right: 0.03em solid #00ecff80;
+}
+
+.border-b-blue {
+    border-bottom: 0.03em solid #00ecff80;
+}
+
+.border-r-blue {
+    border-right: 0.03em solid #00ecff80;
+}
+
+.border-rb-pink {
+    border-bottom: 0.03em solid #ff00ec80;
+    border-right: 0.03em solid #ff00ec80;
+}
+
+.border-b-pink {
+    border-bottom: 0.03em solid #ff00ec80;
+}
+
+.border-r-pink {
+    border-right: 0.03em solid #ff00ec80;
+}
+
+.bold-grad-text-inv {
+    font-weight: 900;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(165deg, rgba(255, 0, 236, 1) 0%, rgba(0, 236, 255, 1) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+
+/* CARDS */
+
+.player-info {
+    border: none;
+    background-color: transparent;
 }
