@@ -15,30 +15,34 @@
 
 <body>
 
-    <div class="nav-logo">
+    <div class="nav-logo mt-2 mt-md-3">
         <a href="../index.html" class="logo"></a>
     </div>
-    <div class="main-playerselect mt-4 mt-md-0">
+    <div class="main-playerselect mt-1">
         <div class="container">
             <div class="row">
                 <div class="col col-md-6">
                     <div class="card card-border-gradient-blue card-background-gradient-blue">
-                        <div class="card-body p-4 p-md-5">
-                            <h5 class="bold-grad-text-blue mb-4">Player 1</h5>
+                        <div class="card-body p-3 p-md-5">
+                            <h5 class="bold-grad-text-blue mb-3 mb-md-4">Player 1</h5>
                             <div class="radios-container">
-                                <div class="form-check mb-4">
-                                    <input class="form-check-input form-blue" type="radio" name="RadioPlayer1" id="RadioPlayer1">
+                                <div class="form-check mb-3 mb-md-4">
+                                    <input class="form-check-input form-blue" type="radio" name="RadioPlayer1"
+                                        id="RadioPlayer1">
                                     <label class="form-check-label ms-3" for="RadioPlayer1-1">
                                         Human
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input form-blue" type="radio" name="RadioPlayer1" id="RadioPlayer1"
-                                        checked>
+                                    <input class="form-check-input form-blue" type="radio" name="RadioPlayer1"
+                                        id="RadioPlayer1" checked>
                                     <label class="form-check-label ms-3" for="RadioPlayer1-2">
                                         Machine
                                         </svg>
                                     </label>
+                                </div>
+                                <div class="input-group input-group-sm mt-3 mt-md-4">
+                                    <input type="text" placeholder="What's your name?" class="form-control text-input-border-blue" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                                 </div>
                             </div>
                         </div>
@@ -46,9 +50,9 @@
                 </div>
                 <div class="col-12 col-md-6 mt-3 mt-md-0">
                     <div class="card card-border-gradient-pink card-background-gradient-pink">
-                        <div class="card-body p-4 p-md-5">
-                            <h5 class="bold-grad-text-pink mb-4">Player 2</h5>
-                            <div class="form-check mb-4">
+                        <div class="card-body p-3 p-md-5">
+                            <h5 class="bold-grad-text-pink mb-3 mb-md-4">Player 2</h5>
+                            <div class="form-check mb-3 mb-md-4">
                                 <input class="form-check-input form-pink" type="radio" name="flexRadioDefaultDown"
                                     id="flexRadioDefault3">
                                 <label class="form-check-label ms-3" for="flexRadioDefault3">
@@ -62,9 +66,19 @@
                                     Machine
                                 </label>
                             </div>
-
+                            <div class="input-group input-group-sm mt-3 mt-md-4">
+                                <input type="text" placeholder="What's your name?" class="form-control text-input-border-pink" aria-label="Sizing example input"
+                                    aria-describedby="inputGroup-sizing-sm">
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-8 col-md-4">
+                    <button class="gradient-button-play bold-grad-text mt-3 mt-md-4">
+                        <a href="./game.html">play</a>
+                    </button>
                 </div>
             </div>
         </div>
