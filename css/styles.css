@@ -277,3 +277,39 @@ body {
     border: none;
     background-color: transparent;
 }
+
+/* WINNER SCREEN */
+
+.main {
+    width: 100vw;
+    height: 55vh;
+}
+
+.congratulation{
+box-shadow: 0px 0px 5px 0px var(--pink-transparent),
+0px 0px 10px 2px var(--blue-transparent);
+width: 100%;
+}
+
+#congrat-player {
+    font-size: calc(1.5rem + 4vw);
+}
+
+.congrat-text {
+    font-size: calc(1rem + 2vw);
+    text-transform: uppercase;
+}
+
+.gradient-button-winner {
+    font-size: 1.5rem;
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: var(--white);
+    border-image: linear-gradient(165deg, rgba(0, 236, 255, 1) 0%, rgba(255, 0, 236, 1) 100%) 1;
+}
+
+.gradient-button-winner:hover {
+    transition: var(--transition);
+    box-shadow: 0px 0px 19px 0px var(--pink-transparent), 0px 0px 23px 5px var(--blue-transparent);
+    border: 0.1em solid #f9f9f9;
+}
