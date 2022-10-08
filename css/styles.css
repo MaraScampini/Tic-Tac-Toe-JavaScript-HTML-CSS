@@ -285,10 +285,10 @@ body {
     height: 55vh;
 }
 
-.congratulation{
-box-shadow: 0px 0px 5px 0px var(--pink-transparent),
-0px 0px 10px 2px var(--blue-transparent);
-width: 100%;
+.congratulation {
+    box-shadow: 0px 0px 5px 0px var(--pink-transparent),
+        0px 0px 10px 2px var(--blue-transparent);
+    width: 100%;
 }
 
 #congrat-player {
@@ -309,6 +309,33 @@ width: 100%;
 }
 
 .gradient-button-winner:hover {
+    transition: var(--transition);
+    box-shadow: 0px 0px 19px 0px var(--pink-transparent), 0px 0px 23px 5px var(--blue-transparent);
+    border: 0.1em solid #f9f9f9;
+}
+
+/* HOW TO */
+
+.main-rules {
+    width: 70%;
+    margin: auto;
+}
+
+@media(max-width:572px) {
+    .rules {
+        font-size: 0.85rem;
+    }
+}
+
+.gradient-button-rules {
+    font-size: calc(0.75rem + 1.5vw);
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: var(--white);
+    border-image: linear-gradient(165deg, rgba(0, 236, 255, 1) 0%, rgba(255, 0, 236, 1) 100%) 1;
+}
+
+.gradient-button-rules:hover {
     transition: var(--transition);
     box-shadow: 0px 0px 19px 0px var(--pink-transparent), 0px 0px 23px 5px var(--blue-transparent);
     border: 0.1em solid #f9f9f9;
