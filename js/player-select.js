@@ -7,7 +7,7 @@ const savePlayers = () => {
 
     let player1Type = document.getElementById("TypePlayer1Human");
     let TypePlayer1 = player1Type.checked;
-    sessionStorage.setItem("¿Is player 1 human?", TypePlayer1);
+    sessionStorage.setItem("Is player 1 human?", TypePlayer1);
 
     let player2Name = document.getElementById("NamePlayer2");
     let NamePlayer2 = player2Name.value;
@@ -16,7 +16,7 @@ const savePlayers = () => {
 
     let player2Type = document.getElementById("TypePlayer2Human");
     let TypePlayer2 = player2Type.checked;
-    sessionStorage.setItem("¿Is player 2 human?", TypePlayer2);
+    sessionStorage.setItem("Is player 2 human?", TypePlayer2);
 
 // CHECK IF EVERYTHING IS FILLED IN AND AT LEAST ONE PLAYER IS A HUMAN
 
