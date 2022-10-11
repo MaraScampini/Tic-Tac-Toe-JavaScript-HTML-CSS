@@ -86,17 +86,14 @@ boardChecks.map((boardCheck, index) => {
             if (playerMark == player1Mark) {
                 player = player1;
                 player1Turns--;
-                console.log(player1Turns)
-                checkWinner();
                 player1TurnsCounter();
-                console.log(boardCheck.innerHTML)
+                checkWinner();
                 playerMark = player2Mark;
             } else {
                 player = player2;
                 player2Turns--;
                 player2TurnsCounter();
                 checkWinner();
-                console.log(boardCheck.innerHTML)
                 playerMark = player1Mark;
             }
         }
@@ -104,45 +101,51 @@ boardChecks.map((boardCheck, index) => {
 })
 
 
-
 const checkWinner = () => {
-    if (boardChecks[0].innerHTML === boardChecks[1].innerHTML && boardChecks[1].innerHTML === boardChecks[2].innerHTML && boardChecks[0].innerHTML != "") {
-        console.log(`Ha ganado ${player.name}`);
+    if (boardChecks[0].innerHTML === boardChecks[1].innerHTML && boardChecks[1].innerHTML === boardChecks[2].innerHTML && boardChecks[0].innerHTML != "") 
+    {
         JSON.stringify(sessionStorage.setItem("Winner", player.name));
         window.location.href = "../pages/winner.html"
     }
-    if (boardChecks[3].innerHTML === boardChecks[4].innerHTML && boardChecks[4].innerHTML === boardChecks[5].innerHTML && boardChecks[3].innerHTML != "") {
-        console.log(`Ha ganado ${player.name}`);
+    if (boardChecks[3].innerHTML === boardChecks[4].innerHTML && boardChecks[4].innerHTML === boardChecks[5].innerHTML && boardChecks[3].innerHTML != "") 
+    {
+        JSON.stringify(sessionStorage.setItem("Winner", player.name));
         window.location.href = "../pages/winner.html"
 
     }
-    if (boardChecks[6].innerHTML === boardChecks[7].innerHTML && boardChecks[7].innerHTML === boardChecks[8].innerHTML && boardChecks[6].innerHTML != "") {
-        console.log(`Ha ganado ${player.name}`);
+    if (boardChecks[6].innerHTML === boardChecks[7].innerHTML && boardChecks[7].innerHTML === boardChecks[8].innerHTML && boardChecks[6].innerHTML != "") 
+    {
+        JSON.stringify(sessionStorage.setItem("Winner", player.name));
         window.location.href = "../pages/winner.html"
 
     }
-    if (boardChecks[0].innerHTML === boardChecks[3].innerHTML && boardChecks[3].innerHTML === boardChecks[6].innerHTML && boardChecks[0].innerHTML != "") {
-        console.log(`Ha ganado ${player.name}`);
+    if (boardChecks[0].innerHTML === boardChecks[3].innerHTML && boardChecks[3].innerHTML === boardChecks[6].innerHTML && boardChecks[0].innerHTML != "") 
+    {
+        JSON.stringify(sessionStorage.setItem("Winner", player.name));
         window.location.href = "../pages/winner.html"
 
     }
-    if (boardChecks[1].innerHTML === boardChecks[4].innerHTML && boardChecks[4].innerHTML === boardChecks[7].innerHTML && boardChecks[1].innerHTML != "") {
-        console.log(`Ha ganado ${player.name}`);
+    if (boardChecks[1].innerHTML === boardChecks[4].innerHTML && boardChecks[4].innerHTML === boardChecks[7].innerHTML && boardChecks[1].innerHTML != "") 
+    {
+        JSON.stringify(sessionStorage.setItem("Winner", player.name));
         window.location.href = "../pages/winner.html"
 
     }
-    if (boardChecks[2].innerHTML === boardChecks[5].innerHTML && boardChecks[5].innerHTML === boardChecks[8].innerHTML && boardChecks[2].innerHTML != "") {
-        console.log(`Ha ganado ${player.name}`);
+    if (boardChecks[2].innerHTML === boardChecks[5].innerHTML && boardChecks[5].innerHTML === boardChecks[8].innerHTML && boardChecks[2].innerHTML != "") 
+    {
+        JSON.stringify(sessionStorage.setItem("Winner", player.name));
         window.location.href = "../pages/winner.html"
 
     }
-    if (boardChecks[0].innerHTML === boardChecks[4].innerHTML && boardChecks[4].innerHTML === boardChecks[8].innerHTML && boardChecks[0].innerHTML != "") {
-        console.log(`Ha ganado ${player.name}`);
+    if (boardChecks[0].innerHTML === boardChecks[4].innerHTML && boardChecks[4].innerHTML === boardChecks[8].innerHTML && boardChecks[0].innerHTML != "") 
+    {
+        JSON.stringify(sessionStorage.setItem("Winner", player.name));
         window.location.href = "../pages/winner.html"
 
     }
-    if (boardChecks[2].innerHTML === boardChecks[4].innerHTML && boardChecks[4].innerHTML === boardChecks[6].innerHTML && boardChecks[6].innerHTML != "") {
-        console.log(`Ha ganado ${player.name}`);
+    if (boardChecks[2].innerHTML === boardChecks[4].innerHTML && boardChecks[4].innerHTML === boardChecks[6].innerHTML && boardChecks[6].innerHTML != "") 
+    {
+        JSON.stringify(sessionStorage.setItem("Winner", player.name));
         window.location.href = "../pages/winner.html"
 
     }
