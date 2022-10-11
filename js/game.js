@@ -80,21 +80,39 @@ let player = player1;
 let boardChecks = Array.from(document.getElementsByClassName("cell"));
 
 boardChecks.map((boardCheck, index) => {
+
     boardCheck.addEventListener('click', () => {
-        if (boardCheck.innerHTML == "") {
-            boardCheck.innerHTML = playerMark;
-            if (playerMark == player1Mark) {
-                player = player1;
-                player1Turns--;
-                player1TurnsCounter();
-                checkWinner();
-                playerMark = player2Mark;
-            } else {
-                player = player2;
-                player2Turns--;
-                player2TurnsCounter();
-                checkWinner();
-                playerMark = player1Mark;
+        if (player1Turns > 0 || player2Turns > 0) {
+            if (boardCheck.innerHTML == "") {
+                boardCheck.innerHTML = playerMark;
+                if (playerMark == player1Mark) {
+                    player = player1;
+                    player1Turns--;
+                    player1TurnsCounter();
+                    checkWinner();
+                    playerMark = player2Mark;
+                } else {
+                    player = player2;
+                    player2Turns--;
+                    player2TurnsCounter();
+                    checkWinner();
+                    playerMark = player1Mark;
+                }
+            }
+        } else {
+            if (boardCheck.innerHTML == playerMark) {
+                boardCheck.innerHTML = "";
+                if (playerMark == player1Mark) {
+                    player = player1;
+                    player1Turns++;
+                    player1TurnsCounter();
+                    checkWinner();
+                } else {
+                    player = player2;
+                    player2Turns++;
+                    player2TurnsCounter();
+                    checkWinner();
+                }
             }
         }
     })
@@ -102,52 +120,43 @@ boardChecks.map((boardCheck, index) => {
 
 
 const checkWinner = () => {
-    if (boardChecks[0].innerHTML === boardChecks[1].innerHTML && boardChecks[1].innerHTML === boardChecks[2].innerHTML && boardChecks[0].innerHTML != "") 
-    {
+    if (boardChecks[0].innerHTML === boardChecks[1].innerHTML && boardChecks[1].innerHTML === boardChecks[2].innerHTML && boardChecks[0].innerHTML != "") {
         JSON.stringify(sessionStorage.setItem("Winner", player.name));
         window.location.href = "../pages/winner.html"
     }
-    if (boardChecks[3].innerHTML === boardChecks[4].innerHTML && boardChecks[4].innerHTML === boardChecks[5].innerHTML && boardChecks[3].innerHTML != "") 
-    {
-        JSON.stringify(sessionStorage.setItem("Winner", player.name));
-        window.location.href = "../pages/winner.html"
-
-    }
-    if (boardChecks[6].innerHTML === boardChecks[7].innerHTML && boardChecks[7].innerHTML === boardChecks[8].innerHTML && boardChecks[6].innerHTML != "") 
-    {
+    if (boardChecks[3].innerHTML === boardChecks[4].innerHTML && boardChecks[4].innerHTML === boardChecks[5].innerHTML && boardChecks[3].innerHTML != "") {
         JSON.stringify(sessionStorage.setItem("Winner", player.name));
         window.location.href = "../pages/winner.html"
 
     }
-    if (boardChecks[0].innerHTML === boardChecks[3].innerHTML && boardChecks[3].innerHTML === boardChecks[6].innerHTML && boardChecks[0].innerHTML != "") 
-    {
+    if (boardChecks[6].innerHTML === boardChecks[7].innerHTML && boardChecks[7].innerHTML === boardChecks[8].innerHTML && boardChecks[6].innerHTML != "") {
         JSON.stringify(sessionStorage.setItem("Winner", player.name));
         window.location.href = "../pages/winner.html"
 
     }
-    if (boardChecks[1].innerHTML === boardChecks[4].innerHTML && boardChecks[4].innerHTML === boardChecks[7].innerHTML && boardChecks[1].innerHTML != "") 
-    {
+    if (boardChecks[0].innerHTML === boardChecks[3].innerHTML && boardChecks[3].innerHTML === boardChecks[6].innerHTML && boardChecks[0].innerHTML != "") {
         JSON.stringify(sessionStorage.setItem("Winner", player.name));
         window.location.href = "../pages/winner.html"
 
     }
-    if (boardChecks[2].innerHTML === boardChecks[5].innerHTML && boardChecks[5].innerHTML === boardChecks[8].innerHTML && boardChecks[2].innerHTML != "") 
-    {
+    if (boardChecks[1].innerHTML === boardChecks[4].innerHTML && boardChecks[4].innerHTML === boardChecks[7].innerHTML && boardChecks[1].innerHTML != "") {
         JSON.stringify(sessionStorage.setItem("Winner", player.name));
         window.location.href = "../pages/winner.html"
 
     }
-    if (boardChecks[0].innerHTML === boardChecks[4].innerHTML && boardChecks[4].innerHTML === boardChecks[8].innerHTML && boardChecks[0].innerHTML != "") 
-    {
+    if (boardChecks[2].innerHTML === boardChecks[5].innerHTML && boardChecks[5].innerHTML === boardChecks[8].innerHTML && boardChecks[2].innerHTML != "") {
         JSON.stringify(sessionStorage.setItem("Winner", player.name));
         window.location.href = "../pages/winner.html"
 
     }
-    if (boardChecks[2].innerHTML === boardChecks[4].innerHTML && boardChecks[4].innerHTML === boardChecks[6].innerHTML && boardChecks[6].innerHTML != "") 
-    {
+    if (boardChecks[0].innerHTML === boardChecks[4].innerHTML && boardChecks[4].innerHTML === boardChecks[8].innerHTML && boardChecks[0].innerHTML != "") {
+        JSON.stringify(sessionStorage.setItem("Winner", player.name));
+        window.location.href = "../pages/winner.html"
+
+    }
+    if (boardChecks[2].innerHTML === boardChecks[4].innerHTML && boardChecks[4].innerHTML === boardChecks[6].innerHTML && boardChecks[6].innerHTML != "") {
         JSON.stringify(sessionStorage.setItem("Winner", player.name));
         window.location.href = "../pages/winner.html"
 
     }
 }
-
