@@ -22,3 +22,35 @@ x2[2] = document.getElementById("x2y3").addEventListener("click", ChangeStatus);
 x3[0] = document.getElementById("x3y1").addEventListener("click", ChangeStatus);
 x3[1] = document.getElementById("x3y2").addEventListener("click", ChangeStatus);
 x3[2] = document.getElementById("x3y3").addEventListener("click", ChangeStatus);
+
+
+
+
+
+
+player1 = "X";
+player2 = "O";
+let player = player1;
+
+let boardChecks = Array.from(document.getElementsByClassName("cell"));
+
+boardChecks.map((boardCheck, index) => {
+    boardCheck.addEventListener('click', () => {
+        if (boardCheck.innerHTML == "") {
+            boardCheck.innerHTML = player;
+            if (player == player1) {
+                player1Turns--;
+                player1TurnsCounter();
+                checkWinner();
+                console.log(boardCheck.innerHTML)
+                player = player2;
+            } else {
+                player2Turns--;
+                player2TurnsCounter();
+                checkWinner();
+                console.log(boardCheck.innerHTML)
+                player = player1;
+            }
+        }
+    })
+})
