@@ -28,3 +28,4 @@ const savePlayers = () => {
        document.getElementById("startGame").href="./game.html";
     };
 }
+

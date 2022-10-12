@@ -54,3 +54,19 @@ boardChecks.map((boardCheck, index) => {
         }
     })
 })
+
+
+
+if (player2.type == "machine") {
+    let nextCheck = boardChecks[Math.floor(Math.random() * boardChecks.length)];
+    while (nextCheck.innerHTML == "") {
+        nextCheck = boardChecks[Math.floor(Math.random() * boardChecks.length)];
+    }
+    nextCheck.innerHTML = "";
+    player = player2;
+    player2Turns++;
+    player2TurnsCounter();
+    checkWinner();
+    playerMark = player1Mark;
+    player = player1;
+}
