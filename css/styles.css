@@ -48,7 +48,7 @@ body {
 }
 
 #welcome {
-    font-size: 3.5rem;
+    font-size: calc(3 rem + 4vw);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -186,14 +186,6 @@ body {
 }
 
 /* GAME */
-
-.positioning {
-    /* width: 100vw;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
-}
 
 /* BOARD */
 

@@ -126,6 +126,7 @@ const player2MachinePlay = () => {
     while (nextCheck.innerHTML != "") {
         nextCheck = boardChecks[Math.floor(Math.random() * boardChecks.length)];
     }
+    
     nextCheck.innerHTML = playerMark;
     player = player2;
     player2Turns--;
@@ -185,6 +186,8 @@ boardChecks.map((boardCheck, index) => {
                     }
 
                 } else {
+                    boardCheck.classList.remove("bold-grad-text");
+                    boardCheck.classList.add("bold-grad-text-inv");
                     player2Play();
                     if (checkWinner() != true) {
                         playerMark = player1Mark;
