@@ -2,6 +2,8 @@
 
 Third weekly project for Geekshubs Academy's Full Stack Developer Bootcamp.
 
+Play at https://marascampini.github.io/Weekly-03/ !
+
 <img src="https://user-images.githubusercontent.com/109754827/196032327-09c519c5-3d96-4cce-98fd-d553c5fd3dd4.png" height="400"/> <img src="https://user-images.githubusercontent.com/109754827/196032341-ecb4d670-da5d-4037-be27-ac88989c5d57.png" height="400"/> <img src="https://user-images.githubusercontent.com/109754827/196032361-46f44479-5e94-4a24-9401-e972f214e010.png" height="400"/>
 
 
