@@ -25,7 +25,7 @@ if (JSON.parse(sessionStorage.getItem("Is player 2 human?")) == true) {
 class Player {
     constructor(name, type) {
         this.name = name,
-            this.type = type
+        this.type = type
     }
 };
 
@@ -79,11 +79,6 @@ let player2Mark = "O";
 let playerMark = player1Mark;
 let player = player1;
 
-if (player1.type == "machine") {
-    playerMark = player2Mark;
-    player = player2;
-}
-
 // TOTAL PLAY COUNTER 
 
 let totalPlays = 0;
@@ -126,7 +121,7 @@ const player2MachinePlay = () => {
     while (nextCheck.innerHTML != "") {
         nextCheck = boardChecks[Math.floor(Math.random() * boardChecks.length)];
     }
-    
+
     nextCheck.innerHTML = playerMark;
     player = player2;
     player2Turns--;
@@ -167,7 +162,24 @@ const machineOffMarks2 = () => {
 
 let boardChecks = Array.from(document.getElementsByClassName("cell"));
 
-boardChecks.map((boardCheck, index) => {
+boardChecks.map((boardCheck) => {
+
+    // CPU STARTS IF PLAYER ONE IS CPU
+
+    if (player1.type == "machine" && player == player1) {
+
+        let nextCheck = boardChecks[Math.floor(Math.random() * boardChecks.length)];
+        nextCheck.innerHTML = playerMark;
+        player = player1;
+        player1Turns--;
+        totalPlays++;
+        player1TurnsCounter();
+        playerMark = player2Mark;
+        player = player2;
+
+    }
+
+    // GAME RUNS NORMALLY
 
     boardCheck.addEventListener('click', () => {
         if (player1Turns > 0 || player2Turns > 0) {
@@ -181,7 +193,7 @@ boardChecks.map((boardCheck, index) => {
                             if (totalPlays > 5 && totalPlays % 2 != 0) {
                                 machineOffMarks2();
                             }
-                            player2MachinePlay();
+                            setTimeout(player2MachinePlay, 500);
                         }
                     }
 
@@ -192,10 +204,10 @@ boardChecks.map((boardCheck, index) => {
                     if (checkWinner() != true) {
                         playerMark = player1Mark;
                         if (player1.type == "machine") {
-                            if (totalPlays > 5 && totalPlays % 2 != 0) {
+                            if (totalPlays > 5 && totalPlays % 2 == 0) {
                                 machineOffMarks1();
                             }
-                            player1MachinePlay();
+                            setTimeout(player1MachinePlay, 500);
                         }
                     }
                 }
