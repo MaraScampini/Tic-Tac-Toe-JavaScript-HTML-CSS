@@ -284,11 +284,11 @@ body {
 }
 
 #congrat-player {
-    font-size: calc(1.5rem + 4vw);
+    font-size: calc(1.25rem + 3vw);
 }
 
 .congrat-text {
-    font-size: calc(1rem + 2vw);
+    font-size: calc(0.5rem + 2vw);
     text-transform: uppercase;
 }
 
